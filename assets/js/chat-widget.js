@@ -1,0 +1,1 @@
+/* Frontend chat interactions will be implemented here. */
