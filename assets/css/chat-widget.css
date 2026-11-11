@@ -1,1 +1,8 @@
-/* Frontend chat widget styles will be implemented here. */
+.wp-rag-assistant { max-width: 40rem; border: 1px solid #dcdcde; padding: 1rem; background: #fff; }
+.wp-rag-assistant__messages { min-height: 3rem; margin-bottom: 1rem; }
+.wp-rag-assistant__messages p { padding: .6rem .8rem; margin: .5rem 0; border-radius: .35rem; white-space: pre-wrap; }
+.wp-rag-assistant__messages .is-user { background: #f0f0f1; }
+.wp-rag-assistant__messages .is-assistant { background: #e7f3ff; }
+.wp-rag-assistant__messages .is-error { color: #b32d2e; }
+.wp-rag-assistant__form { display: flex; gap: .5rem; }
+.wp-rag-assistant__input { flex: 1; min-width: 0; }
