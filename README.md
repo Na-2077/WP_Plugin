@@ -1,8 +1,8 @@
 # WP RAG Assistant
 
-A WordPress plugin for building a retrieval-augmented generation (RAG) assistant. The structure separates indexing, vector-store access, retrieval and generation, admin settings, licensing, frontend assets, and view templates.
+A WordPress plugin scaffold for building a retrieval-augmented generation (RAG) assistant. The initial structure separates indexing, vector-store access, retrieval and generation, admin settings, licensing, frontend assets, and view templates.
 
-> **Status:** The plugin provides a functional first version using OpenAI embeddings/chat and a local WordPress vector table.
+> **Status:** This repository currently contains a starter scaffold. The indexing, provider integrations, chat interactions, and license validation are not implemented yet.
 
 ## Project structure
 
@@ -32,16 +32,15 @@ The repository root is the plugin directory; the `wp-rag-assistant/` label above
 
 1. Copy or clone this repository into `wp-content/plugins/wp-rag-assistant/`.
 2. In WordPress, open **Plugins** and activate **WP RAG Assistant**.
-3. Open **Settings > WP RAG Assistant**, add an OpenAI API key, choose post types, save, and reindex.
-4. Add `[wp_rag_assistant]` to a page or post to display the chat widget.
+3. Implement and configure the provider integrations before using this as a production assistant.
 
 ## Planned responsibilities
 
 - **Indexer:** Listen for post updates and deletions, prepare content chunks, and synchronize them with a vector store.
-- **Vector DB:** Store embeddings locally in a dedicated WordPress table and rank them with cosine similarity.
-- **RAG engine:** Embed user queries, retrieve relevant content, and pass grounded context to OpenAI chat completions.
-- **Admin settings:** Configure credentials, indexed post types, model choices, and manual re-indexing.
-- **Licensing:** Reserved for a future Pro licensing service.
+- **Vector DB:** Provide a provider abstraction for a vector database such as Pinecone, Qdrant, or a supported OpenAI vector-store API.
+- **RAG engine:** Embed user queries, retrieve relevant content, and pass grounded context to a language model.
+- **Admin settings:** Configure credentials, indexed post types, model/provider choices, and manual re-indexing.
+- **Licensing:** Validate a Pro license, if a licensing service is added.
 - **Chat widget:** Provide the frontend chat interface and its styling.
 
 ## Development notes
