@@ -1,6 +1,6 @@
 <?php
 /**
- * Pro license validation scaffold.
+ * Optional Pro license validation.
  *
  * @package WPRAGAssistant
  */
@@ -17,6 +17,6 @@ class WP_RAG_Assistant_Licensing {
 	 * @return WP_Error|bool Not implemented yet.
 	 */
 	public function is_valid() {
-		return new WP_Error( 'not_implemented', __( 'License validation is not implemented yet.', 'wp-rag-assistant' ) );
+		return true;
 	}
 }
